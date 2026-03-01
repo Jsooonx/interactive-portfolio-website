@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gielang — Student Developer & Builder</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio of M. Gielang Fitrawan Mukhlish — Student Developer & Builder based in Surabaya, Indonesia. C, Python, and Web development.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Gielang — Student Developer & Builder">
+    <meta property="og:description"
+        content="Portfolio of M. Gielang Fitrawan Mukhlish — Student Developer & Builder based in Surabaya, Indonesia. C, Python, and Web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/portrait.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Gielang</a>
+
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header id="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hey! I'm Gielang,<br>a <span class="text-accent">Student Developer</span> & Builder based in
+                        Surabaya.</h1>
+                    <p class="hero-subline">Passionate about problem solving and continuous learning through C, Python,
+                        and web development projects.</p>
+                    <a href="#projects" class="btn btn-primary">See My Work</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="portrait-card">
+                        <!-- Swap portrait image here -->
+                        <img src="assets/images/portrait.jpg" alt="Gielang Silhouette Placeholder" class="portrait-img">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="reveal">
+            <div class="section-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content glass-card">
+                    <div class="about-header">
+                        <h3 class="about-name">M. Gielang Fitrawan Mukhlish</h3>
+                        <p class="about-tagline">Student Developer & Builder</p>
+                    </div>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Surabaya, Indonesia</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">SMAN 2 Surabaya (Graduated 2025)</span>
+                        </div>
+                    </div>
+
+                    <div class="about-bio">
+                        <p>As a 2025 graduate from SMAN 2 Surabaya, I am building a strong foundation in programming
+                            through C, Python, and web development projects. I am passionate about continuous learning
+                            and preparing myself for future academic and professional opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="reveal">
+            <div class="section-container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title">Programming</h3>
+                        <ul class="badge-list">
+                            <li class="skill-badge">C</li>
+                            <li class="skill-badge">HTML/CSS</li>
+                            <li class="skill-badge">JavaScript (Vanilla)</li>
+                            <li class="skill-badge">Python</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title">Tools</h3>
+                        <ul class="badge-list">
+                            <li class="skill-badge">Git & GitHub</li>
+                            <li class="skill-badge">VS Code</li>
+                        </ul>
+                    </div>
+
+                    <!-- Practices -->
+                    <div class="skill-category glass-card">
+                        <h3 class="category-title">Core Strengths</h3>
+                        <ul class="badge-list">
+                            <li class="skill-badge">Strong Programming Fundamentals</li>
+                            <li class="skill-badge">Responsive Design</li>
+                            <li class="skill-badge">Problem Solving & Debugging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="projects" class="reveal">
+            <div class="section-container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div id="projects-grid">
+
+                    <!-- C Project -->
+                    <article class="project-card glass-card">
+                        <div class="project-image">
+                            <!-- Image placed here -->
+                            <img src="assets/images/tictactoe.png" alt="Tic Tac Toe Game UI Placeholder"
+                                class="project-img-src" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Tic Tac Toe Game</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Jsooonx/Tic-tac-toe-with-c-programming" target="_blank"
+                                        rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-desc">A console-based Tic Tac Toe implementation in C using a 2D array for
+                                board state management. Includes PvP and simple PvE modes, structured game loops,
+                                modular win-check functions, and basic input handling.</p>
+                            <div class="project-tags">
+                                <span>C</span>
+                                <span>Algorithm</span>
+                                <span>Game Logic</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Web Project: Odin Recipes -->
+                    <article class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="assets/images/odin_recipes.png" alt="Odin Recipes Website Screenshot"
+                                class="project-img-src" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Odin Recipes (Website)</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Jsooonx/Odin-recipes-refactor" target="_blank"
+                                        rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://jsooonx.github.io/Odin-recipes-refactor/" target="_blank"
+                                        rel="noopener" class="project-link" aria-label="Live Demo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-desc">A structured multi-page recipe website built with semantic HTML and
+                                CSS. Originally inspired by The Odin Project curriculum, I redesigned and improved the
+                                layout to practice clean structure, responsive design, and visual consistency.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive Design</span>
+                                <span>Semantic Markup</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Web App Project: Palette Extractor -->
+                    <article class="project-card glass-card">
+                        <div class="project-image">
+                            <img src="assets/images/palette_extractor.png" alt="Palette Extractor Web App Screenshot"
+                                class="project-img-src" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Palette Extractor (Web App)</h3>
+                                <div class="project-links">
+                                    <a href="https://github.com/Jsooonx/Palette-Extractor-Webapp" target="_blank"
+                                        rel="noopener" class="project-link" aria-label="GitHub Repository">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://jsooonx.github.io/Palette-Extractor-Webapp/" target="_blank"
+                                        rel="noopener" class="project-link" aria-label="Live Demo">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-desc">A simple web application that allows users to upload an image and
+                                extract its dominant color palette. Built using HTML, CSS, and vanilla JavaScript, this
+                                project helped me understand DOM manipulation, file handling, and basic color processing
+                                in the browser.</p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>DOM Manipulation</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="reveal">
+            <div class="section-container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item glass-card">
+                        <button class="faq-question" aria-expanded="false">
+                            1. What are your main areas of focus?
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>My main focus areas are C programming, Python fundamentals, and front-end web
+                                    development using HTML, CSS, and vanilla JavaScript. I’m currently strengthening my
+                                    core programming foundations while building practical projects.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question" aria-expanded="false">
+                            2. Why did you build this portfolio using only HTML, CSS, and JavaScript?
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>I chose to build this portfolio using core web technologies to strengthen my
+                                    understanding of fundamentals. Instead of relying on frameworks, I wanted to fully
+                                    understand structure, styling, and interactivity at a deeper level.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question" aria-expanded="false">
+                            3. What are you currently learning?
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>I am currently deepening my understanding of Python and problem-solving, while
+                                    continuing to practice C programming and web development. My goal is to build strong
+                                    fundamentals before moving into more advanced technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question" aria-expanded="false">
+                            4. What are your future goals?
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>My goal is to pursue higher education in computer science and continue developing my
+                                    technical skills. I aim to grow into a capable software developer by building strong
+                                    fundamentals and gaining real-world experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <button class="faq-question" aria-expanded="false">
+                            5. Where are you based?
+                            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                <p>I am based in Surabaya, Indonesia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal">
+            <div class="section-container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-grid">
+                    <a href="mailto:gielangfitrawan@gmail.com" class="contact-cta email-cta glass-card">
+                        <div class="contact-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email Me</h3>
+                            <p>gielangfitrawan@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Jsooonx" target="_blank" rel="noopener"
+                        class="contact-cta github-cta glass-card">
+                        <div class="contact-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>GitHub</h3>
+                            <p>@Jsooonx</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="footer-container">
+            <p>Built with HTML, CSS, and Vanilla JS.</p>
+            <a href="https://github.com/Jsooonx" target="_blank" rel="noopener" aria-label="GitHub Profile"
+                class="footer-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.09.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
