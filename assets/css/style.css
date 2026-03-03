@@ -420,18 +420,72 @@ header {
 }
 
 /* ==========================================================================
-   About Section
+   About Section — Horizontal Scroll Carousel
    ========================================================================== */
-.about-content {
-    max-width: 800px;
-    margin-inline: auto;
+
+/* Scroll container */
+.about-carousel-wrapper {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* Hide scrollbar while keeping functionality */
+    scrollbar-width: none;
+    /* Firefox */
+    outline: none;
+    padding-bottom: 4px;
+    /* prevents clipping of card bottom shadows */
+}
+
+.about-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Each card snaps into place */
+.about-card {
+    flex: 0 0 min(800px, calc(100% - 0px));
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
 }
 
+/* Dot indicators */
+.about-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--space-sm);
+}
+
+.about-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-dot.active {
+    background-color: var(--clr-accent);
+    transform: scale(1.3);
+}
+
+/* About card internals */
 .about-name {
     color: var(--clr-accent);
+    margin-bottom: calc(var(--space-xs) / 2);
+}
+
+.about-card-title {
+    color: var(--clr-text-main);
     margin-bottom: calc(var(--space-xs) / 2);
 }
 
@@ -443,7 +497,7 @@ header {
 
 .about-details {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: var(--space-sm);
     padding-block: var(--space-sm);
     border-top: 1px solid var(--glass-border);
@@ -467,6 +521,10 @@ header {
     font-size: var(--fs-sm);
     font-weight: 500;
     color: var(--clr-text-main);
+}
+
+.about-bio-second {
+    margin-top: var(--space-sm);
 }
 
 /* ==========================================================================

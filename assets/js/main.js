@@ -136,4 +136,51 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    /* ==========================================================================
+       About Section — Carousel Dot Sync & Keyboard Navigation
+       ========================================================================== */
+    const carousel = document.getElementById('about-carousel');
+    const dots = document.querySelectorAll('.about-dot');
+
+    if (carousel && dots.length) {
+        // Update the active dot based on scroll position
+        function updateDots() {
+            const scrollLeft = carousel.scrollLeft;
+            const cardWidth = carousel.scrollWidth / dots.length;
+            const activeIndex = Math.round(scrollLeft / cardWidth);
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === activeIndex);
+            });
+        }
+
+        // Debounce scroll listener for performance
+        let scrollTimer;
+        carousel.addEventListener('scroll', () => {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(updateDots, 50);
+        }, { passive: true });
+
+        // Dot click → scroll to that card
+        dots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const index = Number(dot.dataset.index);
+                const cardWidth = carousel.scrollWidth / dots.length;
+                carousel.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+            });
+        });
+
+        // Keyboard arrow navigation when carousel is focused
+        carousel.addEventListener('keydown', (e) => {
+            const scrollLeft = carousel.scrollLeft;
+            const cardWidth = carousel.scrollWidth / dots.length;
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                carousel.scrollTo({ left: scrollLeft + cardWidth, behavior: 'smooth' });
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                carousel.scrollTo({ left: scrollLeft - cardWidth, behavior: 'smooth' });
+            }
+        });
+    }
 });

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gielang — Student Developer & Builder</title>
+    <title>Gielang - Student Developer & Builder</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="Portfolio of M. Gielang Fitrawan Mukhlish — Student Developer & Builder based in Surabaya, Indonesia. C, Python, and Web development.">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Gielang — Student Developer & Builder">
+    <meta property="og:title" content="Gielang - Student Developer & Builder">
     <meta property="og:description"
         content="Portfolio of M. Gielang Fitrawan Mukhlish — Student Developer & Builder based in Surabaya, Indonesia. C, Python, and Web development.">
     <meta property="og:type" content="website">
@@ -74,28 +74,57 @@
         <section id="about" class="reveal">
             <div class="section-container">
                 <h2 class="section-title">About Me</h2>
-                <div class="about-content glass-card">
-                    <div class="about-header">
-                        <h3 class="about-name">M. Gielang Fitrawan Mukhlish</h3>
-                        <p class="about-tagline">Student Developer & Builder</p>
+                <!-- Horizontal card carousel -->
+                <div class="about-carousel-wrapper" id="about-carousel" role="region" aria-label="About Me cards"
+                    tabindex="0">
+                    <!-- Card 1: Personal Info -->
+                    <div class="about-card glass-card" id="about-card-1">
+                        <div class="about-header">
+                            <h3 class="about-name">M. Gielang Fitrawan Mukhlish</h3>
+                            <p class="about-tagline">Student Developer &amp; Builder</p>
+                        </div>
+
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Surabaya, Indonesia</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Education</span>
+                                <span class="detail-value">SMAN 2 Surabaya (Graduated 2025)</span>
+                            </div>
+                        </div>
+
+                        <div class="about-bio">
+                            <p>As a 2025 graduate from SMAN 2 Surabaya, I am building a strong foundation in programming
+                                through C, Python, and web development projects. I am passionate about continuous
+                                learning
+                                and preparing myself for future academic and professional opportunities.</p>
+                        </div>
                     </div>
 
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Location</span>
-                            <span class="detail-value">Surabaya, Indonesia</span>
+                    <!-- Card 2: Academic Motivation -->
+                    <div class="about-card glass-card" id="about-card-2">
+                        <div class="about-header">
+                            <h3 class="about-card-title">Academic Motivation</h3>
                         </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Education</span>
-                            <span class="detail-value">SMAN 2 Surabaya (Graduated 2025)</span>
-                        </div>
-                    </div>
 
-                    <div class="about-bio">
-                        <p>As a 2025 graduate from SMAN 2 Surabaya, I am building a strong foundation in programming
-                            through C, Python, and web development projects. I am passionate about continuous learning
-                            and preparing myself for future academic and professional opportunities.</p>
+                        <div class="about-bio">
+                            <p>Choosing to pursue Computer Science abroad is not only an academic decision for me, but
+                                also a personal one. I have always lived close to my family and familiar surroundings,
+                                so stepping into a completely new environment will challenge me in ways beyond the
+                                classroom.</p>
+                            <p class="about-bio-second">I know it will require independence, discipline, and resilience.
+                                There is uncertainty in that path, but I see it as an opportunity to grow — not just as
+                                a student, but as a person.</p>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Scroll indicator dots -->
+                <div class="about-dots" aria-hidden="true">
+                    <button class="about-dot active" data-index="0" aria-label="Go to card 1" tabindex="-1"></button>
+                    <button class="about-dot" data-index="1" aria-label="Go to card 2" tabindex="-1"></button>
                 </div>
             </div>
         </section>
