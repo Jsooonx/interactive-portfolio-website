@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* ==========================================================================
-       Mobile Navigation Toggle
-       ========================================================================== */
+    /* Mobile navigation toggle */
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-link');
@@ -26,9 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ==========================================================================
-       Smooth Scrolling
-       ========================================================================== */
+    /* Smooth scrolling */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -52,9 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ==========================================================================
-       Active Link Highlighting (Intersection Observer)
-       ========================================================================== */
+    /* Active link highlighting */
     const sections = document.querySelectorAll('section, header#hero');
 
     // Add logic to IntersectionObserver
@@ -86,9 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionObserver.observe(section);
     });
 
-    /* ==========================================================================
-       FAQ Accordion
-       ========================================================================== */
+    /* FAQ accordion */
     const faqQuestions = document.querySelectorAll('.faq-question');
 
     faqQuestions.forEach(question => {
@@ -110,9 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* ==========================================================================
-       Scroll Reveal Animations
-       ========================================================================== */
+    /* Scroll reveal animation */
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
@@ -137,50 +127,5 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    /* ==========================================================================
-       About Section — Carousel Dot Sync & Keyboard Navigation
-       ========================================================================== */
-    const carousel = document.getElementById('about-carousel');
-    const dots = document.querySelectorAll('.about-dot');
 
-    if (carousel && dots.length) {
-        // Update the active dot based on scroll position
-        function updateDots() {
-            const scrollLeft = carousel.scrollLeft;
-            const cardWidth = carousel.scrollWidth / dots.length;
-            const activeIndex = Math.round(scrollLeft / cardWidth);
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === activeIndex);
-            });
-        }
-
-        // Debounce scroll listener for performance
-        let scrollTimer;
-        carousel.addEventListener('scroll', () => {
-            clearTimeout(scrollTimer);
-            scrollTimer = setTimeout(updateDots, 50);
-        }, { passive: true });
-
-        // Dot click → scroll to that card
-        dots.forEach((dot) => {
-            dot.addEventListener('click', () => {
-                const index = Number(dot.dataset.index);
-                const cardWidth = carousel.scrollWidth / dots.length;
-                carousel.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
-            });
-        });
-
-        // Keyboard arrow navigation when carousel is focused
-        carousel.addEventListener('keydown', (e) => {
-            const scrollLeft = carousel.scrollLeft;
-            const cardWidth = carousel.scrollWidth / dots.length;
-            if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                carousel.scrollTo({ left: scrollLeft + cardWidth, behavior: 'smooth' });
-            } else if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                carousel.scrollTo({ left: scrollLeft - cardWidth, behavior: 'smooth' });
-            }
-        });
-    }
 });

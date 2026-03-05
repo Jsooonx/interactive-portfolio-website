@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Design Tokens
-   ========================================================================== */
 :root {
     /* Fonts */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -37,9 +34,7 @@
     --fs-xxl: clamp(2.5rem, 5vw, 4rem);
 }
 
-/* ==========================================================================
-   CSS Reset
-   ========================================================================== */
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -101,9 +96,7 @@ ol {
     list-style: none;
 }
 
-/* ==========================================================================
-   Typography Base
-   ========================================================================== */
+/* Typography base */
 h1,
 h2,
 h3 {
@@ -130,9 +123,7 @@ p {
     color: var(--clr-text-muted);
 }
 
-/* ==========================================================================
-   Background Glow Element
-   ========================================================================== */
+/* Background glow element */
 .bg-glow {
     position: fixed;
     top: -20vh;
@@ -145,9 +136,7 @@ p {
     z-index: -1;
 }
 
-/* ==========================================================================
-   Section Layouts
-   ========================================================================== */
+/* Section layouts */
 main {
     position: relative;
     z-index: 1;
@@ -162,9 +151,7 @@ header {
     margin-inline: auto;
 }
 
-/* ==========================================================================
-   Navigation
-   ========================================================================== */
+/* Navigation */
 #main-nav {
     position: fixed;
     top: var(--space-md);
@@ -276,9 +263,7 @@ header {
     }
 }
 
-/* ==========================================================================
-   Buttons & Links
-   ========================================================================== */
+/* Buttons and links */
 .btn {
     display: inline-block;
     padding: var(--space-sm) var(--space-md);
@@ -305,9 +290,7 @@ header {
     color: var(--clr-accent);
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* Hero */
 #hero {
     min-height: 100vh;
     display: flex;
@@ -383,9 +366,7 @@ header {
     }
 }
 
-/* ==========================================================================
-   Common Section Styles
-   ========================================================================== */
+/* Section styles */
 .section-container {
     width: 100%;
 }
@@ -419,64 +400,32 @@ header {
     -webkit-backdrop-filter: blur(8px);
 }
 
-/* ==========================================================================
-   About Section — Horizontal Scroll Carousel
-   ========================================================================== */
-
-/* Scroll container */
-.about-carousel-wrapper {
+/* Standard layout for single card */
+.about-content {
     display: flex;
-    gap: var(--space-md);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    /* Hide scrollbar while keeping functionality */
-    scrollbar-width: none;
-    /* Firefox */
-    outline: none;
-    padding-bottom: 4px;
-    /* prevents clipping of card bottom shadows */
+    justify-content: center;
+    width: 100%;
+    margin-top: var(--space-md);
 }
 
-.about-carousel-wrapper::-webkit-scrollbar {
-    display: none;
-    /* Chrome/Safari */
-}
-
-/* Each card snaps into place */
+/* Each card */
 .about-card {
-    flex: 0 0 min(800px, calc(100% - 0px));
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    flex: 0 1 900px;
+    /* Increased width for new content */
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    border: 1px solid var(--glass-border);
+    user-select: text;
 }
 
-/* Dot indicators */
-.about-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: var(--space-sm);
+.about-card:hover {
+    border-color: rgba(255, 68, 34, 0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--clr-accent-glow);
 }
 
-.about-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: var(--radius-full);
-    background-color: var(--glass-border);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.about-dot.active {
-    background-color: var(--clr-accent);
-    transform: scale(1.3);
-}
 
 /* About card internals */
 .about-name {
@@ -487,6 +436,14 @@ header {
 .about-card-title {
     color: var(--clr-text-main);
     margin-bottom: calc(var(--space-xs) / 2);
+}
+
+.about-bio p {
+    margin-bottom: var(--space-sm);
+}
+
+.about-bio p:last-child {
+    margin-bottom: 0;
 }
 
 .about-tagline {
@@ -527,9 +484,7 @@ header {
     margin-top: var(--space-sm);
 }
 
-/* ==========================================================================
-   Skills Section
-   ========================================================================== */
+/* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -571,9 +526,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   Projects Section
-   ========================================================================== */
+/* Projects */
 #projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -677,9 +630,7 @@ header {
     border: 1px solid var(--glass-border);
 }
 
-/* ==========================================================================
-   FAQ Section
-   ========================================================================== */
+/* FAQ */
 .faq-list {
     max-width: 800px;
     margin-inline: auto;
@@ -736,9 +687,7 @@ header {
     color: var(--clr-text-muted);
 }
 
-/* ==========================================================================
-   Contact Section
-   ========================================================================== */
+/* Contact */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -797,9 +746,7 @@ header {
     margin: 0;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 #site-footer {
     padding: var(--space-lg) var(--space-md);
     border-top: 1px solid var(--glass-border);
@@ -846,9 +793,7 @@ header {
     }
 }
 
-/* ==========================================================================
-   Animations & Polish
-   ========================================================================== */
+/* Animations */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
