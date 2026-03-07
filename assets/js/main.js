@@ -127,5 +127,42 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    /* Theme Toggle */
+    const themeToggle = document.getElementById('theme-toggle');
+    const rootElement = document.documentElement;
+    const currentTheme = localStorage.getItem('theme');
+
+    // Setup initial theme
+    if (currentTheme === 'dark') {
+        rootElement.setAttribute('data-theme', 'dark');
+        themeToggle.setAttribute('aria-label', 'Toggle light mode');
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = rootElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                rootElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+            } else {
+                rootElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.setAttribute('aria-label', 'Toggle light mode');
+            }
+        });
+    }
+
+    /* Scroll Progress Bar */
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        if (!progressBar) return;
+
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        progressBar.style.width = scrolled + '%';
+    });
 
 });
